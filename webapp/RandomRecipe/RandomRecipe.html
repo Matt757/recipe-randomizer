@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get Random Recipe</title>
+    <script src="../jquery.js"></script>
+    <script src="RandomRecipe.js"></script>
+    <link rel="stylesheet" href="RandomRecipe.css">
+</head>
+<body>
+<div id="mainDiv" style=" position: absolute; width: 100%; height: 100%">
+    <div id="Options">
+        <p style="display: inline-block">Meatless</p>
+        <select id="meatless" style="display: inline-block">
+            <option value="true">True</option>
+            <option value="false">False</option>
+        </select>
+        <p style="display: inline-block">One day recipe</p>
+        <select id="oneDay" style="display: inline-block">
+            <option value="true">True</option>
+            <option value="false">False</option>
+        </select>
+        <input type="button" value="Get Random Recipe" id="getRecipe" style="display: inline-block"/>
+    </div>
+    <table class="table" id="recipe">
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+    <br>
+    <input type="button" value="Get a different side dish" id="getDifferentSideDish" style="visibility: hidden">
+    <input type="button" value="Add first course" id="getFirstCourse" style="visibility: hidden">
+</div>
+</body>
+</html>

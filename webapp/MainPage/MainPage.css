@@ -1,0 +1,25 @@
+#buttons {
+    width:fit-content;
+}
+
+#welcomeMessage {
+    width: fit-content;
+}
+
+p {
+    border-collapse: collapse;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+button {
+    position: relative;
+    border: 1px solid #E8EAED;
+    border-radius: 5px;
+    background: #009578;
+    box-shadow: 0 1px 3px -2px #9098A9;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    transition: all 150ms ease;
+    color: white;
+}

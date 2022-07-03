@@ -1,0 +1,60 @@
+p {
+    border-collapse: collapse;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+select {
+    position: relative;
+    border: 1px solid #E8EAED;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 1px 3px -2px #9098A9;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    transition: all 150ms ease;
+    color: #5A667F;
+}
+
+option {
+    color: #223254;
+}
+
+.table {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-collapse: collapse;
+    font-family: 'Quicksand', sans-serif;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.table thead th {
+    background: #009578;
+    color: #ffffff;
+}
+
+
+.table td,
+.table th {
+    padding: 10px 20px;
+}
+
+.table tbody tr:nth-of-type(even) {
+    background: #eeeeee;
+}
+
+.table tbody tr:last-of-type {
+    border-bottom: 2px solid #009578;
+}
+
+input {
+    position: relative;
+    border: 1px solid #E8EAED;
+    border-radius: 5px;
+    background: #009578;
+    box-shadow: 0 1px 3px -2px #9098A9;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    transition: all 150ms ease;
+    color: white;
+}

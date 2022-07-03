@@ -1,0 +1,112 @@
+[
+    {
+        "id": 37,
+        "name": "Sarmale împrăștiate",
+        "hasMeat": true,
+        "numberOfDays": 2,
+        "lastCooked": -1,
+        "notes": "",
+        "goesWithSoup": false,
+        "dayOfWeek": "MONDAY",
+        "isStandalone": true
+    },
+    {
+        "id": 19,
+        "name": "Supă de salată",
+        "hasMeat": false,
+        "numberOfDays": 1,
+        "lastCooked": 10,
+        "notes": "",
+        "goesWithSoup": false,
+        "dayOfWeek": "WEDNESDAY",
+        "isStandalone": false
+    },
+    {
+        "id": 12,
+        "name": "Dovlecel la cuptor",
+        "hasMeat": false,
+        "numberOfDays": 1,
+        "lastCooked": -1,
+        "notes": "",
+        "goesWithSoup": true,
+        "dayOfWeek": "WEDNESDAY",
+        "isStandalone": true
+    },
+    {
+        "id": 20,
+        "name": "Supă de chimin",
+        "hasMeat": false,
+        "numberOfDays": 1,
+        "lastCooked": 10,
+        "notes": "",
+        "goesWithSoup": false,
+        "dayOfWeek": "THURSDAY",
+        "isStandalone": false
+    },
+    {
+        "id": 14,
+        "name": "Paste cu ton și sos de roșii și porumb",
+        "hasMeat": false,
+        "numberOfDays": 1,
+        "lastCooked": -1,
+        "notes": "",
+        "goesWithSoup": true,
+        "dayOfWeek": "THURSDAY",
+        "isStandalone": true
+    },
+    {
+        "id": 20,
+        "name": "Supă de chimin",
+        "hasMeat": false,
+        "numberOfDays": 1,
+        "lastCooked": 10,
+        "notes": "",
+        "goesWithSoup": false,
+        "dayOfWeek": "FRIDAY",
+        "isStandalone": false
+    },
+    {
+        "id": 31,
+        "name": "Ouă cu telemea",
+        "hasMeat": false,
+        "numberOfDays": 1,
+        "lastCooked": -1,
+        "notes": "",
+        "goesWithSoup": true,
+        "dayOfWeek": "FRIDAY",
+        "isStandalone": true
+    },
+    {
+        "id": 18,
+        "name": "Supă cu paste",
+        "hasMeat": false,
+        "numberOfDays": 1,
+        "lastCooked": 10,
+        "notes": "",
+        "goesWithSoup": false,
+        "dayOfWeek": "SATURDAY",
+        "isStandalone": false
+    },
+    {
+        "id": 22,
+        "name": "Orez cu prajeala",
+        "hasMeat": true,
+        "numberOfDays": 1,
+        "lastCooked": -1,
+        "notes": "medalioane/crochete etc",
+        "goesWithSoup": true,
+        "dayOfWeek": "SATURDAY",
+        "isStandalone": true
+    },
+    {
+        "id": 15,
+        "name": "Spaghetti cu chiftele",
+        "hasMeat": true,
+        "numberOfDays": 1,
+        "lastCooked": -1,
+        "notes": "",
+        "goesWithSoup": false,
+        "dayOfWeek": "SUNDAY",
+        "isStandalone": true
+    }
+]
