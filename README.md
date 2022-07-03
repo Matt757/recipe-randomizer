@@ -9,13 +9,13 @@ The newest version begins with the main page which displays 3 buttons that redir
 
 The first page is the page that gives us a random recipe based on the two filters. The first filter is for choosing a meal in the case of a fast day, and the second filter allows you to choose if you want to cook a meal only for a day or maybe you want a bigger recipe that can cover multiple days.
 
-![image](https://user-images.githubusercontent.com/61180595/177054284-fa5fbdcd-ff77-4b06-9f32-e2a19b4a735a.png)
+![image](https://user-images.githubusercontent.com/61180595/177055090-5355cc83-be95-432d-b2d6-f6640dfb93f5.png)
 
 In the current version the buttons under the table do nothing.
 
 The second page is the page that gives us all of the main dishes that we have.
 
-![image](https://user-images.githubusercontent.com/61180595/177054333-43c2d826-e963-4da1-899d-f6f26c08ddaf.png)
+![image](https://user-images.githubusercontent.com/61180595/177055120-e3ca1728-b0a2-41ef-8ee8-fd682c33e434.png)
 
 The third page allows us to add a new main dish to the recipes
 
