@@ -1,5 +1,6 @@
 package ro.capan.Recipes.service;
 
+import ro.capan.Recipes.domain.FirstCourse;
 import ro.capan.Recipes.domain.MainCourse;
 import ro.capan.Recipes.domain.SideDish;
 
@@ -14,4 +15,5 @@ public interface ApplicationService {
     MainCourse updateRecipe(MainCourse mainCourse);
     Map<MainCourse,SideDish> getRecipe(Boolean meatless, Boolean oneDay);
     SideDish getSideDish(SideDish sideDish);
+    FirstCourse getFirstCourse(Long firstCourseId);
 }

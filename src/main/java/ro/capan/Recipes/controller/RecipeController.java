@@ -5,10 +5,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import ro.capan.Recipes.converter.FirstCourseConverter;
 import ro.capan.Recipes.converter.MainCourseConverter;
 import ro.capan.Recipes.converter.SideDishConverter;
 import ro.capan.Recipes.domain.MainCourse;
 import ro.capan.Recipes.domain.SideDish;
+import ro.capan.Recipes.dto.FirstCourseDto;
 import ro.capan.Recipes.dto.MainCourseDto;
 import ro.capan.Recipes.dto.SideDishDto;
 import ro.capan.Recipes.service.ApplicationService;
@@ -77,5 +79,10 @@ public class RecipeController {
     @RequestMapping(value = "/differentSideDish", method = RequestMethod.GET)
     public ResponseEntity<SideDishDto> getDifferentSideDish(@RequestBody SideDishDto sideDishDto) {
         return new ResponseEntity<>(SideDishConverter.convertModelToDto(applicationService.getSideDish(SideDishConverter.convertDtoToModel(sideDishDto))), HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/firstCourse/{id}", method = RequestMethod.POST)
+    public ResponseEntity<FirstCourseDto> getFirstCourse(@PathVariable long id) {
+        return new ResponseEntity<>(FirstCourseConverter.convertModelToDto(applicationService.getFirstCourse(id)), HttpStatus.OK);
     }
 }
