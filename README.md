@@ -20,5 +20,5 @@ The third page allows us to add a new main dish to the recipes
 ![image](https://user-images.githubusercontent.com/61180595/177054363-de533efd-9d4a-4638-9d3f-d4d842a8e0f7.png)
 
 version 1.1:
-  can now get a first course for the main course
-  can now select to cook the recipe provided, which updates the last cooked date from the database to the current date, by pushing the "I will cook this today button"
+can now get a first course for the main course
+can now select to cook the recipe provided, which updates the last cooked date from the database to the current date, by pushing the "I will cook this today button"
