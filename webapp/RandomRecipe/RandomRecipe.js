@@ -133,14 +133,10 @@ $(document).ready(function() {
             body: JSON.stringify(jsonData),
         })
             .then(response => {
-                if (response.ok == true) {
+                if (response.ok === true) {
                     alert("successful");
                 }
             })
-            // .then(data => {
-            //     console.log(data);
-            //     alert(data);
-            // })
             .catch(error => {
                 console.error('Error:', error);
             });
