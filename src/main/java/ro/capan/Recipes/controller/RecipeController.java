@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import ro.capan.Recipes.converter.FirstCourseConverter;
 import ro.capan.Recipes.converter.MainCourseConverter;
 import ro.capan.Recipes.converter.SideDishConverter;
+import ro.capan.Recipes.domain.FirstCourse;
 import ro.capan.Recipes.domain.MainCourse;
 import ro.capan.Recipes.domain.SideDish;
 import ro.capan.Recipes.dto.FirstCourseDto;
@@ -64,9 +65,9 @@ public class RecipeController {
     public ResponseEntity<Object> updateRecipe(@RequestBody MainCourseDto mainCourseDto) {
         MainCourse mainCourse = applicationService.updateRecipe(MainCourseConverter.convertDtoToModel(mainCourseDto));
         if(mainCourse != null) {
-            return new ResponseEntity<>("Recipe updated successfully", HttpStatus.CREATED);
+            return new ResponseEntity<>("Main course updated successfully", HttpStatus.CREATED);
         }
-        return new ResponseEntity<>("Error updating recipe", HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>("Error updating main course", HttpStatus.BAD_REQUEST);
     }
 
     @RequestMapping(value = "/randomRecipe", method = RequestMethod.POST)
@@ -84,5 +85,14 @@ public class RecipeController {
     @RequestMapping(value = "/firstCourse/{id}", method = RequestMethod.POST)
     public ResponseEntity<FirstCourseDto> getFirstCourse(@PathVariable long id) {
         return new ResponseEntity<>(FirstCourseConverter.convertModelToDto(applicationService.getFirstCourse(id)), HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/firstCourse/update", method = RequestMethod.POST)
+    public ResponseEntity<Object> updateFirstCourse(@RequestBody FirstCourseDto firstCourseDto) {
+        FirstCourse firstCourse = applicationService.updateFirstCourse(FirstCourseConverter.convertDtoToModel(firstCourseDto));
+        if (firstCourse != null) {
+            return new ResponseEntity<>("First course updated successfully", HttpStatus.CREATED);
+        }
+        return new ResponseEntity<>("Error updating first course", HttpStatus.BAD_REQUEST);
     }
 }

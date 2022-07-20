@@ -37,4 +37,9 @@ public class FirstCourseServiceImplementation implements FirstCourseService{
             return firstCourse;
         }
     }
+
+    @Override
+    public FirstCourse update(FirstCourse firstCourse) {
+        return firstCourseRepository.save(firstCourse);
+    }
 }

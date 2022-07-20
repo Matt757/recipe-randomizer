@@ -69,4 +69,9 @@ public class ApplicationServiceImplementation implements ApplicationService{
     public FirstCourse getFirstCourse(Long firstCourseId) {
         return firstCourseService.getFirstCourse(firstCourseId);
     }
+
+    @Override
+    public FirstCourse updateFirstCourse(FirstCourse firstCourse) {
+        return firstCourseService.update(firstCourse);
+    }
 }

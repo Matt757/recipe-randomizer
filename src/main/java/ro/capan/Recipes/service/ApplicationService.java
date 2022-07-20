@@ -16,4 +16,5 @@ public interface ApplicationService {
     Map<MainCourse,SideDish> getRecipe(Boolean meatless, Boolean oneDay);
     SideDish getSideDish(SideDish sideDish);
     FirstCourse getFirstCourse(Long firstCourseId);
+    FirstCourse updateFirstCourse(FirstCourse firstCourse);
 }
