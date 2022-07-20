@@ -11,8 +11,6 @@ The first page is the page that gives us a random recipe based on the two filter
 
 ![image](https://user-images.githubusercontent.com/61180595/177055090-5355cc83-be95-432d-b2d6-f6640dfb93f5.png)
 
-In the current version the buttons under the table do nothing.
-
 The second page is the page that gives us all of the main dishes that we have.
 
 ![image](https://user-images.githubusercontent.com/61180595/177055120-e3ca1728-b0a2-41ef-8ee8-fd682c33e434.png)
@@ -21,4 +19,6 @@ The third page allows us to add a new main dish to the recipes
 
 ![image](https://user-images.githubusercontent.com/61180595/177054363-de533efd-9d4a-4638-9d3f-d4d842a8e0f7.png)
 
-version 1.1: can now get a first course for the main course
+version 1.1:
+  can now get a first course for the main course
+  can now select to cook the recipe provided, which updates the last cooked date from the database to the current date, by pushing the "I will cook this today button"
