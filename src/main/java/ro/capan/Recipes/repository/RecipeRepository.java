@@ -10,4 +10,5 @@ import java.util.List;
 public interface RecipeRepository extends JpaRepository<MainCourse, Long> {
     List<MainCourse> findRecipesByHasMeat(Boolean hasMeat);
     List<MainCourse> findRecipesByNumberOfDays(Integer numberOfDays);
+    List<MainCourse> findRecipesByHasMeatAndNumberOfDays(Boolean hasMeat, Integer numberOfDays);
 }

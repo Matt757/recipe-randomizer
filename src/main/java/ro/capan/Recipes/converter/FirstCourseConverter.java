@@ -14,6 +14,9 @@ public class FirstCourseConverter {
     }
 
     public static FirstCourseDto convertModelToDto(FirstCourse firstCourse) {
-        return new FirstCourseDto(firstCourse.getId(), firstCourse.getName(), firstCourse.getHasMeat(), firstCourse.getNotes());
+        if (firstCourse != null) {
+            return new FirstCourseDto(firstCourse.getId(), firstCourse.getName(), firstCourse.getHasMeat(), firstCourse.getNotes());
+        }
+        return null;
     }
 }

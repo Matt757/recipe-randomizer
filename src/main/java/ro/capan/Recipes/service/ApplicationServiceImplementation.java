@@ -2,6 +2,7 @@ package ro.capan.Recipes.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ro.capan.Recipes.domain.FirstCourse;
 import ro.capan.Recipes.domain.MainCourse;
 import ro.capan.Recipes.domain.SideDish;
 
@@ -11,13 +12,15 @@ import java.util.Map;
 
 @Service("ApplicationServiceImplementation")
 public class ApplicationServiceImplementation implements ApplicationService{
-    private RecipeService recipeService;
-    private SideDishService sideDishService;
+    private final RecipeService recipeService;
+    private final SideDishService sideDishService;
+    private final FirstCourseService firstCourseService;
 
     @Autowired
-    ApplicationServiceImplementation(RecipeService recipeService, SideDishService sideDishService) {
+    ApplicationServiceImplementation(RecipeService recipeService, SideDishService sideDishService, FirstCourseService firstCourseService) {
         this.recipeService = recipeService;
         this.sideDishService = sideDishService;
+        this.firstCourseService = firstCourseService;
     }
 
     @Override
@@ -60,5 +63,15 @@ public class ApplicationServiceImplementation implements ApplicationService{
     @Override
     public SideDish getSideDish(SideDish sideDish) {
         return sideDishService.getSideDish(sideDish);
+    }
+
+    @Override
+    public FirstCourse getFirstCourse(Long firstCourseId) {
+        return firstCourseService.getFirstCourse(firstCourseId);
+    }
+
+    @Override
+    public FirstCourse updateFirstCourse(FirstCourse firstCourse) {
+        return firstCourseService.update(firstCourse);
     }
 }

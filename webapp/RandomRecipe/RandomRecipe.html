@@ -22,13 +22,39 @@
         </select>
         <input type="button" value="Get Random Recipe" id="getRecipe" style="display: inline-block"/>
     </div>
+
     <table class="table" id="recipe">
         <thead></thead>
         <tbody></tbody>
     </table>
     <br>
-    <input type="button" value="Get a different side dish" id="getDifferentSideDish" style="visibility: hidden">
     <input type="button" value="Add first course" id="getFirstCourse" style="visibility: hidden">
+    <input type="button" value="Get a different side dish" id="getDifferentSideDish" style="visibility: hidden">
+    <br>
+    <br>
+    <table class="table" id="firstCourse">
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+    <br>
+    <input type="button" value="I will cook this today" id="updateRecipes" style="visibility: hidden">
+    <p id="recipeId" style="visibility: hidden"></p>
+    <p id="recipeName" style="visibility: hidden"></p>
+    <p id="recipeHasMeat" style="visibility: hidden"></p>
+    <p id="recipeNotes" style="visibility: hidden"></p>
+    <p id="recipeNumberOfDays" style="visibility: hidden"></p>
+    <p id="recipeLasCooked" style="visibility: hidden"></p>
+    <p id="recipeRequiresSideDish" style="visibility: hidden"></p>
+
+    <p id="sideDishId" style="visibility: hidden">0</p>
+    <p id="sideDishName" style="visibility: hidden"></p>
+    <p id="sideDishHasMeat" style="visibility: hidden"></p>
+    <p id="sideDishNotes" style="visibility: hidden"></p>
+
+    <p id="firstCourseId" style="visibility: hidden">0</p>
+    <p id="firstCourseName" style="visibility: hidden"></p>
+    <p id="firstCourseHasMeat" style="visibility: hidden"></p>
+    <p id="firstCourseNotes" style="visibility: hidden"></p>
 </div>
 </body>
 </html>
