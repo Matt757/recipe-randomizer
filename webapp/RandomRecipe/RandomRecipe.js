@@ -77,7 +77,6 @@ $(document).ready(function() {
         let table = $("#firstCourse");
         let meatless = $("#meatless");
         let firstCourseId = $("#firstCourseId").html();
-        console.log(firstCourseId);
         $('#firstCourse > tbody  > tr').each(function(index, tr) {
             tr.remove()
         });
@@ -133,8 +132,12 @@ $(document).ready(function() {
             body: JSON.stringify(jsonData),
         })
             .then(response => {
+                console.log(response);
                 if (response.ok === true) {
                     alert("successful");
+                }
+                else {
+                    alert("unsuccessful");
                 }
             })
             .catch(error => {

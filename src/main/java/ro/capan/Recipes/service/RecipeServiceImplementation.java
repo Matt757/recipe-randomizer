@@ -5,7 +5,10 @@ import org.springframework.stereotype.Service;
 import ro.capan.Recipes.domain.MainCourse;
 import ro.capan.Recipes.repository.RecipeRepository;
 
+import java.time.LocalDate;
 import java.util.*;
+
+import static java.time.temporal.ChronoUnit.DAYS;
 
 @Service("RecipeServiceImplementation")
 public class RecipeServiceImplementation implements RecipeService {
@@ -41,39 +44,51 @@ public class RecipeServiceImplementation implements RecipeService {
         return recipeRepository.save(mainCourse);
     }
 
-    /**
-     * Generates 7 random recipes that have not been cooked in the past 2 weeks, including one without meat
-     *
-     * @param meatLessDay boolean value that is true if the user wants a meatless day
-     * @return a list of recipes
-     */
     @Override
     public MainCourse getRecipe(Boolean meatLessDay, Boolean oneDay) {
         Random randomRecipe = new Random();
+        LocalDate localDate = LocalDate.now();
+        System.out.println("hello?");
         if (!meatLessDay) {
+            System.out.println("hello1?");
             if (!oneDay) {
                 List<MainCourse> menu = recipeRepository.findAll();
-
-                return menu.get(randomRecipe.nextInt(menu.size()));
+                MainCourse mainCourse = menu.get(randomRecipe.nextInt(menu.size()));
+                while (DAYS.between(mainCourse.getLastCooked(), localDate) < 7) {
+                    mainCourse = menu.get(randomRecipe.nextInt(menu.size()));
+                }
+                return mainCourse;
             }
             else {
                 List<MainCourse> menu = recipeRepository.findRecipesByNumberOfDays(1);
-                return menu.get(randomRecipe.nextInt(menu.size()));
+                MainCourse mainCourse = menu.get(randomRecipe.nextInt(menu.size()));
+                while (DAYS.between(localDate, mainCourse.getLastCooked()) < 7) {
+                    mainCourse = menu.get(randomRecipe.nextInt(menu.size()));
+                }
+                return mainCourse;
             }
         }
         else {
-            List<MainCourse> menu = recipeRepository.findRecipesByHasMeat(false);
-            return menu.get(randomRecipe.nextInt(menu.size()));
+            System.out.println("hello2?");
+            if (!oneDay) {
+                List<MainCourse> menu = recipeRepository.findRecipesByHasMeat(false);
+                MainCourse mainCourse = menu.get(randomRecipe.nextInt(menu.size()));
+                while (DAYS.between(localDate, mainCourse.getLastCooked()) < 7) {
+                    mainCourse = menu.get(randomRecipe.nextInt(menu.size()));
+                }
+                return mainCourse;
+            }
+            else {
+                List<MainCourse> menu = recipeRepository.findRecipesByHasMeatAndNumberOfDays(false, 1);
+                MainCourse mainCourse = menu.get(randomRecipe.nextInt(menu.size()));
+                while (DAYS.between(localDate, mainCourse.getLastCooked()) < 7) {
+                    mainCourse = menu.get(randomRecipe.nextInt(menu.size()));
+                }
+                return mainCourse;
+            }
         }
     }
 
-    /**
-     * This method is called with a different counter
-     *
-     * @param counter      counts how many days have a meal set
-     * @param menu         the list of recipes for the week
-     * @param randomRecipe the value that gives the random recipes
-     */
     private int getPartialMenu(int counter, List<MainCourse> menu, Random randomRecipe) {
         int randomInt;
         MainCourse mainCourse;

@@ -62,7 +62,7 @@ public class RecipeController {
     }
 
     @RequestMapping(value = "/recipes/update", method = RequestMethod.POST)
-    public ResponseEntity<Object> updateRecipe(@RequestBody MainCourseDto mainCourseDto) {
+    public ResponseEntity<String> updateRecipe(@RequestBody MainCourseDto mainCourseDto) {
         MainCourse mainCourse = applicationService.updateRecipe(MainCourseConverter.convertDtoToModel(mainCourseDto));
         if(mainCourse != null) {
             return new ResponseEntity<>("Main course updated successfully", HttpStatus.CREATED);
