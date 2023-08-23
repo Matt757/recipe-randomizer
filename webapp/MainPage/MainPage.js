@@ -8,4 +8,5 @@ $(document).ready( function () {
     buttons.css('margin-top', (parseInt(mainDiv.height())/2 - parseInt(buttons.height())/2) + 'px');
     welcomeMessage.css('margin-left', (parseInt(buttons.width())/2 - parseInt(welcomeMessage.width())/2) + 'px');
     buttons.css('visibility', 'visible')
+    main
 })

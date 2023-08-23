@@ -3,29 +3,25 @@ An application that gives you a random recipe that you have not cooked in a whil
 
 This application aims to help you when you do not know what to cook by giving you a random recipe with some filters that you set and that has not been cooked in a while.
 
-The newest version begins with the main page which displays 3 buttons that redirect to 3 different pages.
+The main page is currently composed of 3 blocks that serve different purposes
 
-![image](https://user-images.githubusercontent.com/61180595/177054137-59ce36d1-9b87-496c-8ad8-e5f8f275d330.png)
+The table shows all of the saved recipes and some info about them, such as notes, the last time it was cooked, if it requires a side dish and so on
 
-The first page is the page that gives us a random recipe based on the two filters. The first filter is for choosing a meal in the case of a fast day, and the second filter allows you to choose if you want to cook a meal only for a day or maybe you want a bigger recipe that can cover multiple days.
+![image](https://github.com/Matt757/recipe-randomizer/assets/61180595/9b8395cd-85a3-4644-b3a5-3ac07a84cf0f)
 
-![image](https://user-images.githubusercontent.com/61180595/180221320-20048b46-d1a0-456f-beba-4ce332791e49.png)
+By clicking on a recipe, a menu is opened on the right side which allows editing, deleting, or updating the last cooked date to the current day
 
-The "Add first course" button allows you to add a random first course dish to your meal. By clicking it again after recieveing a first course, you will get a random different one. The "I will cook this today" button updates the last cooked date to the current date.
-
-![image](https://user-images.githubusercontent.com/61180595/180221080-0d1b37b1-aa9e-42e8-a191-22836d5786bb.png)
-
-The second page is the page that gives us all of the main dishes that we have.
-
-![image](https://user-images.githubusercontent.com/61180595/177055120-e3ca1728-b0a2-41ef-8ee8-fd682c33e434.png)
+![image](https://github.com/Matt757/recipe-randomizer/assets/61180595/ecd82494-8c57-48b3-9f06-362814dccb08)
 
 
-The third page allows us to add a new main dish to the recipes
+This part gives a random recipe based on the 2 filters
 
-![image](https://user-images.githubusercontent.com/61180595/177054363-de533efd-9d4a-4638-9d3f-d4d842a8e0f7.png)
+![image](https://github.com/Matt757/recipe-randomizer/assets/61180595/84c65c2b-6657-44fa-8472-4b23f78e270c)
 
 
-version 1.1:  
-can now get a first course for the main course  
-can now select to cook the recipe provided, which updates the last cooked date from the database to the current date, by clicking the "I will cook this today button"  
-will now only get main courses that have not been cooked in the last week
+This part is used for adding a recipe to the database
+
+![image](https://github.com/Matt757/recipe-randomizer/assets/61180595/b4a1470b-a722-421c-a593-d90c28c83d15)
+
+
+The repository also contains the begining of a NetCore backend that is so far a work in progress

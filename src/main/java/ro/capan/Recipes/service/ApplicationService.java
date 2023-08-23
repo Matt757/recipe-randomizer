@@ -9,6 +9,7 @@ import java.util.Map;
 
 public interface ApplicationService {
     List<MainCourse> getAllRecipes();
+    List<FirstCourse> getAllFirstCourses();
     MainCourse getRecipeById(Long id);
     void addRecipe(MainCourse mainCourse);
     void deleteRecipeById(Long id);
@@ -17,4 +18,7 @@ public interface ApplicationService {
     SideDish getSideDish(SideDish sideDish);
     FirstCourse getFirstCourse(Long firstCourseId);
     FirstCourse updateFirstCourse(FirstCourse firstCourse);
+    void deleteFirstCourseById(long id);
+    void addFirstCourse(FirstCourse firstCourse);
+    FirstCourse getRandomFirstCourse();
 }

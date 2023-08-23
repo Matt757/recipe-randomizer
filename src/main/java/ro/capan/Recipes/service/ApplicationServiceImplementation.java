@@ -29,6 +29,11 @@ public class ApplicationServiceImplementation implements ApplicationService{
     }
 
     @Override
+    public List<FirstCourse> getAllFirstCourses() {
+        return firstCourseService.getAllFirstCourses();
+    }
+
+    @Override
     public MainCourse getRecipeById(Long id) {
         return recipeService.getRecipeById(id);
     }
@@ -73,5 +78,20 @@ public class ApplicationServiceImplementation implements ApplicationService{
     @Override
     public FirstCourse updateFirstCourse(FirstCourse firstCourse) {
         return firstCourseService.update(firstCourse);
+    }
+
+    @Override
+    public void deleteFirstCourseById(long id) {
+        firstCourseService.deleteFirstCourseById(id);
+    }
+
+    @Override
+    public void addFirstCourse(FirstCourse firstCourse) {
+        firstCourseService.addFirstCourse(firstCourse);
+    }
+
+    @Override
+    public FirstCourse getRandomFirstCourse() {
+        return firstCourseService.getRandomFirstCourse();
     }
 }

@@ -1,3 +1,42 @@
+body {
+    margin: 0px;
+    overflow: hidden;
+}
+
+#mainDiv {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.nav-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.nav-list {
+    float: left;
+}
+
+.nav-list a {
+    font-family: 'Quicksand', sans-serif;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-list a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #009578;
+}
+
 p {
     border-collapse: collapse;
     font-family: 'Quicksand', sans-serif;
@@ -12,7 +51,6 @@ select {
     box-shadow: 0 1px 3px -2px #9098A9;
     cursor: pointer;
     font-family: 'Quicksand', sans-serif;
-    transition: all 150ms ease;
     color: #5A667F;
 }
 
@@ -55,6 +93,5 @@ input {
     box-shadow: 0 1px 3px -2px #9098A9;
     cursor: pointer;
     font-family: 'Quicksand', sans-serif;
-    transition: all 150ms ease;
     color: white;
 }

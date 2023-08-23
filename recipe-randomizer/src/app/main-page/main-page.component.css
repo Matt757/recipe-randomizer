@@ -1,0 +1,197 @@
+#flex-container {
+  display: flex;
+  position: relative;
+}
+
+#side-bar {
+  width: 20vw;
+  background-color: #009578;
+  overflow: auto;
+}
+
+body {
+  margin:0;
+  padding:0
+}
+
+label {
+  border-collapse: collapse;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+p {
+  border-collapse: collapse;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+select {
+  position: relative;
+  border: 1px solid #E8EAED;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 1px 3px -2px #9098A9;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  color: #5A667F;
+}
+
+option {
+  color: #223254;
+}
+
+input {
+  position: relative;
+  border: 1px solid #E8EAED;
+  border-radius: 5px;
+  background: #009578;
+  box-shadow: 0 1px 3px -2px #9098A9;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.edit {
+  background-color: red !important;
+  border: 1px solid #E8EAED;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px -2px #9098A9;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+}
+
+button {
+  border: 1px solid #E8EAED;
+  border-radius: 5px;
+  background: #009578;
+  box-shadow: 0 1px 3px -2px #9098A9;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#submit, #submitGetRecipe{
+  margin-top: 1vw;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+#getRecipeForm {
+  padding: 1vw;
+  border: solid #005646;
+}
+
+#newRecipeForm {
+  padding: 1vw;
+  border-left: solid #005646;
+  border-right: solid #005646;
+  border-bottom: solid #005646;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.table {
+  border-collapse: collapse;
+  font-family: 'Quicksand', sans-serif;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.table thead th {
+  background: #009578;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+}
+
+
+.table td,
+.table th {
+  padding: 10px 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.table tbody tr:nth-of-type(even) {
+  background: #eeeeee;
+}
+
+.table tbody tr:last-of-type td{
+  border-bottom: 2px solid #009578;
+}
+
+.table tbody tr:last-of-type td:last-of-type{
+  border-bottom: white;
+}
+
+#allRecipes {
+  padding-top: 1vh;
+  padding-left: 1vw;
+}
+
+.name_row {
+  text-align: center;
+  background: transparent;
+  border: none;
+  box-shadow: 0 0 0 0;
+}
+
+.notes_row {
+  text-align: center;
+  background: transparent;
+  border: none;
+  box-shadow: 0 0 0 0;
+}
+
+.numberOfDays_row {
+  width: 3vw;
+  text-align: center;
+  background: transparent;
+  border: none;
+  box-shadow: 0 0 0 0;
+}
+
+.lastCooked_row {
+  width: 7vw;
+  text-align: center;
+  background: transparent;
+  border: none;
+  box-shadow: 0 0 0 0;
+}
+
+.hasMeat_row {
+  width: 5vw;
+  text-align: center;
+  background: transparent;
+  border: none;
+  box-shadow: 0 0 0 0;
+}
+
+.requiresSideDish_row {
+  width: 5vw;
+  text-align: center;
+  background: transparent;
+  border: none;
+  box-shadow: 0 0 0 0;
+}
+
+.options {
+  background-color: white;
+  border-bottom: white;
+}
+
+.options_head {
+  background: white;
+  color: white;
+  width: 0;
+  visibility: hidden;
+  border-bottom: white;
+}

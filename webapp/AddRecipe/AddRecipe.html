@@ -10,27 +10,27 @@
 <body>
 <div id="mainDiv" style=" position: absolute; width: 100%; height: 100%">
     <div id="newRecipeForm">
-            <label for="name">Recipe name</label><br>
-            <input type="text" id="name" name="name"><br>
-            <label for="hasMeat">Has meat</label><br>
-            <select id="hasMeat">
+            <label style="visibility: hidden" id="nameLabel" for="name">Recipe name</label><br>
+            <input style="visibility: hidden" type="text" id="name" name="name"><br>
+            <label style="visibility: hidden" id="hasMeatLabel" for="hasMeat">Has meat</label><br>
+            <select style="visibility: hidden" id="hasMeat">
                 <option value="true">True</option>
                 <option value="false">False</option>
             </select><br>
-            <label for="notes">Notes</label><br>
-            <input type="text" id="notes" name="notes"><br>
-            <label for="numberOfDays">Number of days</label><br>
-            <input type="text" id="numberOfDays" name="numberOfDays"><br>
-            <label for="lastCooked">Last time the recipe was cooked (yyyy-dd-mm format)</label><br>
-            <input type="text" id="lastCooked" name="lastCooked"><br>
-            <label for="requiresSideDish">Requires side dish</label><br>
-            <select id="requiresSideDish">
+            <label style="visibility: hidden" id="notesLabel" for="notes">Notes</label><br>
+            <input style="visibility: hidden" type="text" id="notes" name="notes"><br>
+            <label style="visibility: hidden" id="numberOfDaysLabel" for="numberOfDays">Number of days</label><br>
+            <input style="visibility: hidden" type="text" id="numberOfDays" name="numberOfDays"><br>
+            <label style="visibility: hidden" id="lastCookedLabel" for="lastCooked">Last time the recipe was cooked (yyyy-dd-mm format)</label><br>
+            <input style="visibility: hidden" type="text" id="lastCooked" name="lastCooked"><br>
+            <label style="visibility: hidden" id="requiresSideDishLabel" for="requiresSideDish">Requires side dish</label><br>
+            <select style="visibility: hidden" id="requiresSideDish">
                 <option value="true">True</option>
                 <option value="false">False</option>
             </select><br>
-            <input type="submit" value="Submit" id="submit">
-
+            <input style="visibility: hidden" type="submit" value="Submit" id="submit">
     </div>
+    <input id="backButton" style="visibility:hidden;" type="button" value="Back to main page" onclick="location.href = '../MainPage/MainPage.html'">
 </div>
 </body>
 </html>
