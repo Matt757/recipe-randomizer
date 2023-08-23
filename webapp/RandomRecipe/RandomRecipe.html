@@ -7,7 +7,13 @@
     <script src="RandomRecipe.js"></script>
     <link rel="stylesheet" href="RandomRecipe.css">
 </head>
-<body>
+<body >
+<ul class="nav-ul">
+    <li class="nav-list"><a href="../MainPage/MainPage.html">Home</a></li>
+    <li class="nav-list"><a class="active" href="RandomRecipe.html">Random Recipe</a></li>
+    <li class="nav-list"><a href="../AllRecipes/AllRecipes.html">All Recipes</a></li>
+    <li class="nav-list"><a href="../AddRecipe">Add Recipe</a></li>
+</ul>
 <div id="mainDiv" style=" position: absolute; width: 100%; height: 100%">
     <div id="Options">
         <p style="display: inline-block">Meatless</p>
@@ -28,8 +34,8 @@
         <tbody></tbody>
     </table>
     <br>
-    <input type="button" value="Add first course" id="getFirstCourse" style="visibility: hidden">
-    <input type="button" value="Get a different side dish" id="getDifferentSideDish" style="visibility: hidden">
+    <input type="button" value="Add first course" id="getFirstCourse" style="display: none">
+    <input type="button" value="Get a different side dish" id="getDifferentSideDish" style="display: none">
     <br>
     <br>
     <table class="table" id="firstCourse">
@@ -37,24 +43,25 @@
         <tbody></tbody>
     </table>
     <br>
-    <input type="button" value="I will cook this today" id="updateRecipes" style="visibility: hidden">
-    <p id="recipeId" style="visibility: hidden"></p>
-    <p id="recipeName" style="visibility: hidden"></p>
-    <p id="recipeHasMeat" style="visibility: hidden"></p>
-    <p id="recipeNotes" style="visibility: hidden"></p>
-    <p id="recipeNumberOfDays" style="visibility: hidden"></p>
-    <p id="recipeLasCooked" style="visibility: hidden"></p>
-    <p id="recipeRequiresSideDish" style="visibility: hidden"></p>
+    <input type="button" value="I will cook this today" id="updateRecipes" style="display: none">
+    <p id="recipeId" style="display: none"></p>
+    <p id="recipeName" style="display: none"></p>
+    <p id="recipeHasMeat" style="display: none"></p>
+    <p id="recipeNotes" style="display: none"></p>
+    <p id="recipeNumberOfDays" style="display: none"></p>
+    <p id="recipeLasCooked" style="display: none"></p>
+    <p id="recipeRequiresSideDish" style="display: none"></p>
 
-    <p id="sideDishId" style="visibility: hidden">0</p>
-    <p id="sideDishName" style="visibility: hidden"></p>
-    <p id="sideDishHasMeat" style="visibility: hidden"></p>
-    <p id="sideDishNotes" style="visibility: hidden"></p>
+    <p id="sideDishId" style="display: none">0</p>
+    <p id="sideDishName" style="display: none"></p>
+    <p id="sideDishHasMeat" style="display: none"></p>
+    <p id="sideDishNotes" style="display: none"></p>
 
-    <p id="firstCourseId" style="visibility: hidden">0</p>
-    <p id="firstCourseName" style="visibility: hidden"></p>
-    <p id="firstCourseHasMeat" style="visibility: hidden"></p>
-    <p id="firstCourseNotes" style="visibility: hidden"></p>
+    <p id="firstCourseId" style="display: none">0</p>
+    <p id="firstCourseName" style="display: none"></p>
+    <p id="firstCourseHasMeat" style="display: none"></p>
+    <p id="firstCourseNotes" style="display: none"></p>
+    <input type="button" value="Back to main page" onclick="location.href = '../MainPage/MainPage.html'">
 </div>
 </body>
 </html>
