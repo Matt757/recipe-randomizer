@@ -42,4 +42,26 @@ public class FirstCourseServiceImplementation implements FirstCourseService{
     public FirstCourse update(FirstCourse firstCourse) {
         return firstCourseRepository.save(firstCourse);
     }
+
+    @Override
+    public List<FirstCourse> getAllFirstCourses() {
+        return firstCourseRepository.findAll();
+    }
+
+    @Override
+    public void deleteFirstCourseById(long id) {
+        firstCourseRepository.delete(firstCourseRepository.getById(id));
+    }
+
+    @Override
+    public void addFirstCourse(FirstCourse firstCourse) {
+        firstCourseRepository.save(firstCourse);
+    }
+
+    @Override
+    public FirstCourse getRandomFirstCourse() {
+        Random randomFirstCourse = new Random();
+        List<FirstCourse> menu = firstCourseRepository.findAll();
+        return menu.get(randomFirstCourse.nextInt(menu.size()));
+    }
 }

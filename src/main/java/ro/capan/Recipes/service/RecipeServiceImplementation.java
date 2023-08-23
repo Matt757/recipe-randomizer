@@ -8,6 +8,7 @@ import ro.capan.Recipes.repository.RecipeRepository;
 import java.time.LocalDate;
 import java.util.*;
 
+import static java.lang.Math.abs;
 import static java.time.temporal.ChronoUnit.DAYS;
 
 @Service("RecipeServiceImplementation")
@@ -48,9 +49,7 @@ public class RecipeServiceImplementation implements RecipeService {
     public MainCourse getRecipe(Boolean meatLessDay, Boolean oneDay) {
         Random randomRecipe = new Random();
         LocalDate localDate = LocalDate.now();
-        System.out.println("hello?");
         if (!meatLessDay) {
-            System.out.println("hello1?");
             if (!oneDay) {
                 List<MainCourse> menu = recipeRepository.findAll();
                 MainCourse mainCourse = menu.get(randomRecipe.nextInt(menu.size()));
@@ -62,18 +61,19 @@ public class RecipeServiceImplementation implements RecipeService {
             else {
                 List<MainCourse> menu = recipeRepository.findRecipesByNumberOfDays(1);
                 MainCourse mainCourse = menu.get(randomRecipe.nextInt(menu.size()));
-                while (DAYS.between(localDate, mainCourse.getLastCooked()) < 7) {
+                while (DAYS.between(mainCourse.getLastCooked(), localDate) < 7) {
+                    System.out.println(DAYS.between(localDate, mainCourse.getLastCooked()));
                     mainCourse = menu.get(randomRecipe.nextInt(menu.size()));
                 }
                 return mainCourse;
             }
         }
         else {
-            System.out.println("hello2?");
             if (!oneDay) {
                 List<MainCourse> menu = recipeRepository.findRecipesByHasMeat(false);
                 MainCourse mainCourse = menu.get(randomRecipe.nextInt(menu.size()));
-                while (DAYS.between(localDate, mainCourse.getLastCooked()) < 7) {
+                while (DAYS.between(mainCourse.getLastCooked(), localDate) < 7) {
+                    System.out.println("eu incerc dar nu prea reusesc");
                     mainCourse = menu.get(randomRecipe.nextInt(menu.size()));
                 }
                 return mainCourse;
@@ -81,7 +81,8 @@ public class RecipeServiceImplementation implements RecipeService {
             else {
                 List<MainCourse> menu = recipeRepository.findRecipesByHasMeatAndNumberOfDays(false, 1);
                 MainCourse mainCourse = menu.get(randomRecipe.nextInt(menu.size()));
-                while (DAYS.between(localDate, mainCourse.getLastCooked()) < 7) {
+                while (DAYS.between(mainCourse.getLastCooked(), localDate) < 7) {
+                    System.out.println("eu incerc dar nu prea reusesc");
                     mainCourse = menu.get(randomRecipe.nextInt(menu.size()));
                 }
                 return mainCourse;
